@@ -3,6 +3,8 @@
 ## About this repo
 This is the Git repo of the nginx Dockerfile used in the Jenkins at Your Service (JAYS) architecture.
 
+More information about JAYS comming soon.
+
 ## usage
 
 ### Variable replacement
