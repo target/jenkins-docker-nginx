@@ -1,0 +1,30 @@
+version: "3.1"
+
+services:
+  router:
+    image: target/jenkins-docker-nginx
+    networks:
+      - jenkins
+    ports:
+      - "80:80"
+      - "443:443"
+    secrets:
+      - cert.crt
+      - cert.key
+    environment:
+      - DOMAIN=example.com
+      - SUB_DOMAIN=jenkins
+    deploy:
+      replicas: 3
+      placement:
+        constraints: [node.role == manager]
+
+networks:
+  jenkins:
+    external: true
+
+secrets:
+  cert.crt:
+    external: true
+  cert.key:
+    external: true

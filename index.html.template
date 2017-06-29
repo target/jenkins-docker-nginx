@@ -1,0 +1,8 @@
+<html>
+<head>
+<title>Jenkins</title>
+</head>
+<body>
+This is Jenkins. Reach out to <a href="mailto:jenkins@$DOMAIN">jenkins@$DOMAIN</a> if you need assistance.
+</body>
+</html>
