@@ -7,7 +7,7 @@ JAYS is a platform for providing multiple Jenkins instances in a Docker Swarm cl
 
 More information about JAYS comming soon.
 
-## usage
+## Usage
 
 ### Variable replacement
 Out-of-the-box, Nginx doesn't support using environment variables inside most configuration blocks. We will be using [envsubst](http://www.tutorialspoint.com/unix_commands/envsubst.htm) to replace variables within the default.conf.template and index.html.template files.
@@ -38,22 +38,25 @@ COPY <my default template> /etc/nginx/conf.d/default.conf.template
 The following steps need to be done on a Docker Swarm manager
 
 1. Create a Docker swarm [overlay network](https://docs.docker.com/engine/reference/commandline/network_create/#options) with:
-  ```
-  docker network create --driver overlay --subnet <Subnet in CIDR format> jenkins
-  ```
 
-1. Create Docker secrets for your ssl certificate
-  ```
-  docker secret create cert.crt <path to certificate>
-  docker secret create cert.key <path to key>
-  ```
+    ```
+    $ docker network create --driver overlay --subnet <Subnet in CIDR format> jenkins
+    ```
+
+1. Create Docker secrets for your ssl
+
+    ```
+    $ docker secret create cert.crt <path to certificate>
+    $ docker secret create cert.key <path to key>
+    ```
 
 1. Modify the `docker-compose.yml` file to have company specific settings
 
 1. Create a [docker stack](https://docs.docker.com/engine/reference/commandline/stack_deploy/)
-  ```
-  $ docker stack deploy -c docker-compose.yml service
-  ```
+
+    ```
+    $ docker stack deploy -c docker-compose.yml service
+    ```
 
 ## Contributors
 
