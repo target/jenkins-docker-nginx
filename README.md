@@ -11,6 +11,8 @@
 - **Where to get help**:
   [The Jenkins users google group](https://groups.google.com/forum/?nomobile=true#!forum/jenkinsci-users) or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=jenkins)
 
+- **Where to get background information**: [The Target tech blog](https://target.github.io/beacon/2018/01/24/jays.html)
+
 - **Where to file issues**:
   [https://github.com/target/jenkins-docker-nginx/issues](https://github.com/target/jenkins-docker-nginx/issues)
 
