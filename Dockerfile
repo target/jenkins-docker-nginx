@@ -1,8 +1,3 @@
-# run tests with gixy - https://github.com/yandex/gixy
-FROM yandex/gixy
-COPY files/default.conf.template /etc/nginx/conf.d/default.conf.template
-RUN gixy /etc/nginx/conf.d/default.conf.template
-
 FROM nginx:1.13.8-alpine
 COPY files/default.conf.template /etc/nginx/conf.d/default.conf.template
 COPY files/502.html /usr/share/nginx/html/502.html

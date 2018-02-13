@@ -1,0 +1,9 @@
+language: python
+
+python:
+  - "3.6"
+
+install:
+  - pip install gixy
+
+script: gixy files/default.conf.template
